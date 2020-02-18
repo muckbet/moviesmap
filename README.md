@@ -1,6 +1,6 @@
 # MoviesMap
 ###### The main aim
-The application visualizes all the movies' locations in a 300km radius from given coordinates
+The application visualizes all the movies' locations in a 300km radius of the given coordinates
 ## What map shows?
 1. The world map
 2. Colourful countries due to the number of the population
