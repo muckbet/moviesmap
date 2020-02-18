@@ -51,6 +51,9 @@ for i, el in enumerate(data):
     if year != el[1]:
         continue
 
+    if counter == 10:
+        break
+        
     if el[0] != prev:
         try:
 
@@ -62,6 +65,7 @@ for i, el in enumerate(data):
                 print(el[0], el[1], (lat, lon))
                 fg.add_child(folium.CircleMarker(location=[lat, lon], radius=8, popup=f"{year}\n movie:{el[0]}",
                                                  fill_color="#f2db24", color="#fff50d"))
+                counter += 1
         except:
             pass
     prev = el[0]
