@@ -1,4 +1,4 @@
-# moviesmap
+# MoviesMap
 ###### The main aim
 The application visualizes all the movies' locations in a 300km radius from given coordinates
 ## What map shows?
