@@ -26,8 +26,6 @@ with open("locations.list", encoding="utf8", errors='ignore') as f:
                 pass
 
 data.sort(key=lambda x: x[1])
-print(data)
-print(len(data))
 
 year = int(input("Enter year: "))
 center = input("Please enter your location (format: lat, long): ").split(', ')
