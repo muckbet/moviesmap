@@ -53,9 +53,9 @@ for i, el in enumerate(data):
         break
         
     if el[0] != prev:
-        try:
-
-            location = geolocator.geocode(el[2])
+        
+        location = geolocator.geocode(el[2])
+        if location != None:
             lat = location.latitude
             lon = location.longitude
             dis = distance.distance(center, (lat, lon)).km
@@ -64,8 +64,7 @@ for i, el in enumerate(data):
                 fg.add_child(folium.CircleMarker(location=[lat, lon], radius=8, popup=f"{year}\n movie:{el[0]}",
                                                  fill_color="#f2db24", color="#fff50d"))
                 counter += 1
-        except:
-            pass
+        
     prev = el[0]
 
 
