@@ -64,7 +64,7 @@ for i, el in enumerate(data):
                 if dis <= radius:
                     print(el[0], el[1], (lat, lon))
                     fg.add_child(folium.CircleMarker(location=[lat, lon], radius=8, popup=f"{year}\n movie:{el[0]}",
-                                                     fill_color="#f2db24", color="#fff50d"))
+                                                     fill_color="#47ffed", color="#47f3ff"))
                     counter += 1
         except:
             pass
