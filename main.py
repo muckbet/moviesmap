@@ -6,7 +6,7 @@ from geopy import geocoders
 from geopy.exc import GeocoderTimedOut
 import ssl
 
-print("Please wait...)
+print("Please wait...")
 
 data = []
 same = ""
