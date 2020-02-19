@@ -1,10 +1,10 @@
 # MoviesMap
 ###### The main aim
-The application visualizes all the movies' locations in a 300km radius of the given coordinates
+The application visualizes all the movies' locations within a 300km radius of the given coordinates
 ## What map shows?
 1. The world map
-2. Colourful countries due to the number of the population
-3. Locations in a 300km radius from given coordinates
+2. Population of countries due to darkness of colors' (the more darker - the more population)
+3. Locations of movies filmed within a 300km radius of given coordinates
 ## Usage
 To start the application you have to have installed python 3+ version
 ```
