@@ -6,6 +6,8 @@ from geopy import geocoders
 from geopy.exc import GeocoderTimedOut
 import ssl
 
+print("Please wait...)
+
 data = []
 same = ""
 with open("locations.list", encoding="utf8", errors='ignore') as f:
@@ -75,23 +77,23 @@ def population():
     """
     population_mask = folium.FeatureGroup(name="Population")
     population_mask.add_child(
-        folium.GeoJson(data=open('../lab2.2/world.json', 'r',
+        folium.GeoJson(data=open('world.json', 'r',
                                  encoding='utf-8-sig').read(),
-                       style_function=lambda x: {'fillColor': '#EE2376'  # pink
+                       style_function=lambda x: {'fillColor': '#000000', 'color': '#a9a9a9'  # pink
                        if x['properties']['POP2005'] < 100000
-                       else '#81DC1A' if 100000 <= x['properties'][
-                           'POP2005'] < 200000  # green
-                       else '#B6E80E' if 200000 <= x['properties'][
-                           'POP2005'] < 1000000  # light green
-                       else '#5503E5' if 1000000 <= x['properties'][
-                           'POP2005'] < 2000000  # purple
-                       else '#E57703' if 2000000 <= x['properties'][
-                           'POP2005'] < 9000000  # orange
-                       else '#0EE896' if 9000000 <= x['properties'][
-                           'POP2005'] < 15000000  # blue
-                       else '#E112B5' if 15000000 <= x['properties'][
-                           'POP2005'] < 20000000  # pink
-                       else '#3882EC'}))  # dark blue
+                       else '#81DC1A' 'A9A9A9' if 100000 <= x['properties'][
+                           'POP2005'] < 200000  
+                       else '#cfffff' if 200000 <= x['properties'][
+                           'POP2005'] < 1000000  
+                       else '#76e3e3'  if 1000000 <= x['properties'][
+                           'POP2005'] < 2000000  
+                       else '#609c9c'  if 2000000 <= x['properties'][
+                           'POP2005'] < 9000000  
+                       else '#5d9c9c' if 9000000 <= x['properties'][
+                           'POP2005'] < 15000000  
+                       else '#0f4545'  if 15000000 <= x['properties'][
+                           'POP2005'] < 20000000  
+                       else '#2F4F4F' }))  
     return population_mask
 
 
